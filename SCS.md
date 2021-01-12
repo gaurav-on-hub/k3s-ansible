@@ -8,7 +8,7 @@ These instructions will result in a k3s cluster on 3 virtual machines created by
 
 > These need to be t2.small (2CPU with 6GB RAM) running Debian 10.
 
-- Once SCS notifies you the machines are ready, you'll need to `ssh-copy-key` to all of the nodes.
+- Once SCS notifies you the machines are ready, you'll need to `ssh-copy-id` to all of the nodes.
 
 - Follow the instructions in the in the [README](./README.md) in this project.
 
@@ -20,7 +20,7 @@ source py3/bin/activate
 pip install ansible
 ```
 
-- Edit the IP addresses in the [SCS inventory.](./inventory/scs/hosts.ini) . Also note the `./inventory/scs/group_vars/all.yml` contains the OS user who can ssh directly to the node as a result of the `ssh-copy-key` operation.  The default for SCS is root but if for some reason it is different, this is the file to update.
+- Edit the IP addresses in the [SCS inventory.](./inventory/scs/hosts.ini) . Also note the `./inventory/scs/group_vars/all.yml` contains the OS user who can ssh directly to the node as a result of the `ssh-copy-id` operation.  The default for SCS is root but if for some reason it is different, this is the file to update.
 
 - Run `ansible-playbook site.yml -i inventory/scs/hosts.ini`.  This will take about 2 minutes to complete.
 
