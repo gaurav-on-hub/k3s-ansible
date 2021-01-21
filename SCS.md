@@ -6,7 +6,7 @@ These instructions will result in a k3s cluster on 3 virtual machines created by
 
 - Create 3 SCS machines at the [SCS Portal](https://onestop.netapp.com/scs).  Make sure they are allocated from the compute in RTP OpenLab.
 
-> These need to be t2.small (2CPU with 6GB RAM) running Debian 10.
+> These need to be m2.small (2CPU with 8GB RAM) running Debian 10. [SCS machine spec](./img/scs-vm-spec.png)
 
 - Once SCS notifies you the machines are ready, you'll need to `ssh-copy-id` to all of the nodes.
 
